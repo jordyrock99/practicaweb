@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>CUEVANNA</title>
+  <style>
+    :root {
+      --primary-color: hsl(272, 100%, 65%);
+      --bg-color: #0b0c10;
+      --text-color: #ffffff;
+      --card-bg: #1f2833;
+      --accent-color: #45a29e;
+    }
+
+    body {
+     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: url('https://e00-elmundo.uecdn.es/assets/multimedia/imagenes/2023/04/04/16806167695710.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: var(--text-color);
+      backdrop-filter: blur(2px);
+    }
+
+    header {
+      background-color: #000;
+      padding: 30px 0;
+      text-align: center;
+      border-bottom: 4px solid var(--primary-color);
+    }
+
+    header h1 {
+      font-size: 52px;
+      margin: 0;
+      color: var(--primary-color);
+      font-weight: bold;
+      letter-spacing: 2px;
+    }
+
+    .botones-header {
+      margin-top: 20px;
+    }
+
+    .btn-header {
+      display: inline-block;
+      background-color: var(--primary-color);
+      color: white;
+      padding: 12px 24px;
+      margin: 0 10px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-size: 16px;
+      transition: background 0.3s ease;
+    }
+
+    .btn-header:hover {
+      background-color: #a710bb;
+    }
+
+    .contenedor {
+      max-width: 1300px;
+      margin: auto;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .section-title {
+      font-size: 32px;
+      margin: 60px 0 30px;
+      color: var(--accent-color);
+      border-bottom: 2px solid var(--accent-color);
+      display: inline-block;
+      padding-bottom: 5px;
+    }
+
+    .grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+    }
+
+    .card {
+      background: var(--card-bg);
+      border-radius: 16px;
+      box-shadow: 0 8px 24px rgba(33, 37, 68, 0.5);
+      padding: 20px;
+      width: 230px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+      animation: aparecer 0.6s ease-in-out forwards;
+      opacity: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 12px 28px rgba(229, 9, 20, 0.4);
+    }
+
+    .card img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-bottom: 10px;
+    }
+
+    .card h3 {
+      color: var(--accent-color);
+    }
+
+    #boleta {
+      margin-top: 50px;
+      padding: 30px;
+      background: #1c1c1c;
+      border-radius: 15px;
+      box-shadow: 0 6px 20px rgba(229, 9, 20, 0.5);
+      display: none;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+      animation: aparecer 0.5s ease-in-out forwards;
+    }
+
+    #boleta img {
+      width: 150px;
+      border-radius: 8px;
+      margin-bottom: 10px;
+    }
+
+    #boleta ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .btn-encuesta {
+      display: inline-block;
+      margin-top: 50px;
+      background-color: var(--primary-color);
+      color: white;
+      padding: 16px 32px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-size: 18px;
+      transition: background 0.3s ease;
+    }
+
+    .btn-encuesta:hover {
+      background-color: #b00610;
+    }
+
+    @keyframes aparecer {
+      from {
+        transform: translateY(20px);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>MOVIDY</h1>
+    <div class="botones-header">
+      <a href="#peliculas" class="btn-header">CARTELERA</a>
+      <a href="encuesta.html" class="btn-header">Encuesta</a>
+    </div>
+  <div class="contenedor">
+    <h2 class="section-title">Películas</h2>
+    <div class="grid" id="peliculas">
+      <div class="card" onclick="seleccionarPelicula('residen evil', 30, 'https://https://es.web.img3.acsta.net/pictures/21/10/19/16/02/0444216.jpgm.media-amazon.com/images/M/MV5BMWFiZjUwZmEtMGVjYi00MjI0LTk5MzAtMjM0MjRkODcyNjI5XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg')">
+        <img src="https://es.web.img3.acsta.net/pictures/21/10/19/16/02/0444216.jpg">
+        <h3>Resident Evil</h3>
+        <p>Welcome to Raccoon City es una película de terror y acción que sirve como reinicio de la saga basada en los famosos videojuegos de Resident Evil. La historia se sitúa en 1998, cuando Raccoon City, una pequeña ciudad minera, comienza a sufrir extraños y violentos sucesos causados por un brote viral desarrollado por la corporación Umbrella.</p>
+      </div>
+      <div class="card" onclick="seleccionarPelicula('todo en todas partes al mismo tiempo', 32, 'https://pics.filmaffinity.com/Los_4_Fantaasticos_Primeros_pasos-284761648-large.jpg')">
+        <img src="https://pics.filmaffinity.com/Todo_a_la_vez_en_todas_partes-897692218-large.jpg">
+        <h3>todo en todas partes al mismo tiempo</h3>
+        <p>Todo en Todas Partes al Mismo Tiempo es una película que mezcla ciencia ficción, comedia y drama con una historia única y sorprendente. La trama sigue a Evelyn, una mujer común que de repente descubre que puede acceder a múltiples realidades paralelas donde existen diferentes versiones de ella misma.</p>
+      </div>
+      <div class="card" onclick="seleccionarPelicula('el conjuro 3', 24, 'https://https://m.media-amazon.com/images/S/pv-target-images/dfd59666ac852c49e8e810afa5ce1e9e1c9bb359ef09ad0254bf3a096e37c27b.jpgm.media-amazon.com/images/M/MV5BYjFiY2I0NTEtNjdjNy00MTljLThkOWYtMzNiYjYyMDcxYjhkXkEyXkFqcGc@._V1_.jpg')">
+        <img src="https://m.media-amazon.com/images/S/pv-target-images/dfd59666ac852c49e8e810afa5ce1e9e1c9bb359ef09ad0254bf3a096e37c27b.jpg">
+        <h3>El conjuro 3</h3>
+        <p>El Diablo Me Obligó a Hacerlo está basada en un caso real que investiga a los famosos investigadores paranormales Ed y Lorraine Warren. En esta entrega, la pareja se enfrenta a uno de sus casos más inquietantes: un hombre acusado de asesinato que afirma haber sido poseído por un demonio y obligado a cometer el crimen.</p>
+      </div>
+      <div class="card" onclick="seleccionarPelicula('como entrenar a tu dragon', 28, 'https://pichttps://es.web.img3.acsta.net/img/82/c9/82c98127314efdde24f74dbcf3c799b5.jpegs.filmaffinity.com/The_Monkey-732743039-large.jpg')">
+        <img src="https://es.web.img3.acsta.net/img/82/c9/82c98127314efdde24f74dbcf3c799b5.jpeg">
+        <h3>Como entrenar a tu dragon</h3>
+        <p>sigue la historia de Hipo, un joven vikingo que vive en la isla de Berk, donde la tradición es combatir y capturar dragones. Sin embargo, Hipo, que no encaja en la forma tradicional de ser vikingo, descubre un dragón herido llamado Chimuelo (Toothless). En lugar de pelear contra él, Hipo decide ayudarlo y entablar una amistad secreta.</p>
+      </div>
+      <div class="card" onclick="seleccionarPelicula('lilo y stitch', 29, 'https://m.media-amazon.chttps://lumiere-a.akamaihd.net/v1/images/image_01f8d16d.jpeg?region=0,0,540,810om/images/M/MV5BZWJjMjdhNGEtZjEyMi00OTg2LTllMzQtN2JlZWNjYzI4YzFhXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg')">
+        <img src="https://lumiere-a.akamaihd.net/v1/images/image_01f8d16d.jpeg?region=0,0,540,810">
+        <h3>lilo y stitch</h3>
+        <p>Lilo es una niña hawaiana solitaria que adopta a un perro que en realidad es un extraterrestre travieso que se esconde de unos cazadores intergalácticos.</p>
+      </div>
+      <div class="card" onclick="seleccionarPelicula('ell señor de loa anillos', 33, 'https://https://pics.filmaffinity.com/El_seanor_de_los_anillos_La_comunidad_del_anillo-952398002-large.jpgstrapi-staging-aws-bucket.s3.us-west-1.amazonaws.com/Gi4_Exo_DXIAY_Oa8t_0cbdb95f71.jpg')">
+        <img src="https://pics.filmaffinity.com/El_seanor_de_los_anillos_La_comunidad_del_anillo-952398002-large.jpg">
+        <h3>El señor de los anillos</h3>
+        <p>El Señor de los Anillos es una épica aventura de fantasía que sigue la misión de un humilde hobbit llamado Frodo Bolsón. Frodo hereda un anillo mágico y peligroso, conocido como el Anillo Único, que posee un poder inmenso y maligno creado por el oscuro señor Sauron para dominar la Tierra Media.</p>
+      </div>
+    </div>
+
+    <h2 class="section-title">Combos y productos</h2>
+    <div class="grid" id="productos">
+      <div class="card" onclick="agregarProducto('Combo de pelicula', 70)">
+        <img src="https://tofuu.getjusto.com/orioneat-local/resized2/W6mPT2K6R4mgSaoY2-300-x.webp">
+        <h3>Combo de pelicula</h3>
+        <p>Canchita mas 2 gaseosas y 2 snacks</p>
+      </div>
+      <div class="card" onclick="agregarProducto('Chocolate feastables', 11)">
+        <img src="https://feastables.com/cdn/shop/files/preview_images/bab5d281b94941faa0515fd6a3517450.thumbnail.0000000000.jpg?v=1713285024">
+        <h3>Chocolate feastables</h3>
+        <p>1 barra de chocolate</p>
+      </div>
+      <div class="card" onclick="agregarProducto('ComboCombo Peruano 3', 30)">
+        <img src="https://scontent.flim26-1.fna.fbcdn.net/v/t1.6435-9/66749804_10156653297424315_8983381225838215168_n.png?_nc_cat=106&ccb=1-7&_nc_sid=127cfc&_nc_ohc=gsa2YoD2v5YQ7kNvwHTdV4n&_nc_oc=AdmbJct4qS72dLNwVx7wxU80UZKR2Gdsyyqc8uPSKKCYmpuZykGKvEY2l1dyIVzOTi0&_nc_zt=23&_nc_ht=scontent.flim26-1.fna&_nc_gid=MwmZ2lf4YhFjTHF6acVK9w&oh=00_AfQhn0qei80MUjaPEiDOZMTkU7Z53ApxXn7lRT_gwXUjCA&oe=6899183C">
+        <h3>Combo Peruano</h3>
+        <p>1 canchita con papas grande y 2 gaseosas</p>
+      </div>
+      <div class="card" onclick="agregarProducto('Chombo Nachos y chanchita dulceocolate', 26)">
+        <img src="https://tofuu.getjusto.com/orioneat-local/resized2/ocL2JvWJg5rqqerZa-300-x.webp">
+        <h3>combo Nachos y chanchita dulce</h3>
+        <p>2 nachos 2 chanchitas</p>
+      </div>
+      <div class="card" onclick="agregarProducto('CCombo chanchitaombo Hot Dog', 19)">
+        <img src="https://cuponassets.cuponatic-latam.com/backendMx/uploads/imagenes_descuentos/78558/e2d26e632df2f957c70840e07a2d0461a560ed40.XL2.jpg">
+        <h3>Combo chanchita</h3>
+        <p>1 chanchita mediana 1 gaseosa</p>
+      </div>
+      <div class="card" onclick="agregarProducto('Combo Nachos', 25)">
+        <img src="https://cuponassets.cuponatic-latam.com/backendMx/uploads/imagenes_descuentos/94227/6f86a091b0028c31a012a139722ab48e471973b2.XL2.jpg">
+        <h3>Combo Nachos</h3>
+        <p>Nachos y 1 gaseosa</p>
+      </div>
+    </div>
+
+    <div id="boleta">
+      <h2>Tu Boleta</h2>
+      <div id="resumenPelicula"></div>
+      <ul id="resumenProductos"></ul>
+      <h3 id="totalDisplay"></h3>
+    </div>
+
+    <a class="btn-encuesta" href="encuesta.html">COMPRAR</a>
+  </div>
+
+  <script>
+    let peliculaSeleccionada = null;
+    let productosSeleccionados = [];
+
+    function seleccionarPelicula(nombre, precio, imagen) {
+      peliculaSeleccionada = { nombre, precio, imagen };
+      mostrarBoleta();
+    }
+
+    function agregarProducto(nombre, precio) {
+      productosSeleccionados.push({ nombre, precio });
+      mostrarBoleta();
+    }
+
+    function mostrarBoleta() {
+      if (!peliculaSeleccionada) return;
+
+      document.getElementById("boleta").style.display = "block";
+
+      const resumenPelicula = document.getElementById("resumenPelicula");
+      resumenPelicula.innerHTML = `
+        <h3>${peliculaSeleccionada.nombre}</h3>
+        <img src="${peliculaSeleccionada.imagen}" alt="${peliculaSeleccionada.nombre}">
+        <p>Precio: S/ ${peliculaSeleccionada.precio}</p>
+      `;
+
+      const resumenProductos = document.getElementById("resumenProductos");
+      resumenProductos.innerHTML = productosSeleccionados.map(p =>
+        `<li>${p.nombre} - S/ ${p.precio}</li>`).join("");
+
+      const total = peliculaSeleccionada.precio + productosSeleccionados.reduce((sum, p) => sum + p.precio, 0);
+      const totalDisplay = document.getElementById("totalDisplay");
+      totalDisplay.textContent = `Total: S/ ${total}`;
+    }
+  </script>
+</body>
+</html>

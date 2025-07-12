@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Encuesta de Cine</title>
+  <style>
+    :root {
+      --primary-color: #e50914;
+      --bg-color: #000;
+      --text-color: #ffffff;
+      --card-bg: rgba(0, 0, 0, 0.85);
+      --accent-color: #f5c518; /* color dorado tipo IMDb */
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: url('https://e00-elmundo.uecdn.es/assets/multimedia/imagenes/2023/04/04/16806167695710.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: var(--text-color);
+      backdrop-filter: blur(2px);
+    }
+
+    .formulario {
+      background: var(--card-bg);
+      padding: 40px;
+      border-radius: 15px;
+      box-shadow: 0 0 40px rgba(229, 9, 20, 0.7);
+      max-width: 700px;
+      margin: 60px auto;
+      text-align: left;
+    }
+
+    .formulario h2 {
+      text-align: center;
+      color: var(--accent-color);
+      margin-bottom: 30px;
+      font-size: 32px;
+      text-shadow: 0 0 5px #000;
+    }
+
+    label {
+      display: block;
+      margin: 20px 0 8px;
+      font-weight: bold;
+      color: var(--text-color);
+    }
+
+    select, textarea {
+      width: 100%;
+      padding: 12px;
+      border-radius: 6px;
+      border: none;
+      background-color: #f0f0f0;
+      color: #000;
+      font-size: 15px;
+    }
+
+    .btn {
+      margin-top: 25px;
+      background-color: var(--primary-color);
+      color: white;
+      padding: 14px 28px;
+      border: none;
+      border-radius: 6px;
+      text-decoration: none;
+      display: inline-block;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #b00610;
+    }
+
+    .btn-volver {
+      background-color: #555;
+      margin-left: 10px;
+    }
+
+    .btn-volver:hover {
+      background-color: #222;
+    }
+
+    form {
+      animation: fadeIn 1.2s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="formulario">
+    <h2>🎬 Encuesta de Satisfacción Cinematográfica</h2>
+    <form action="https://www.cinemark-peru.com/?tag=742" target="_blank">
+
+      <label>1. ¿Qué tan satisfecho estás con la película?</label>
+      <select>
+        <option>Muy satisfecho</option>
+        <option>Satisfecho</option>
+        <option>Regular</option>
+        <option>Insatisfecho</option>
+      </select>
+
+      <label>2. ¿Te gustaron los efectos especiales?</label>
+      <select>
+        <option>Mucho</option>
+        <option>Algo</option>
+        <option>Poco</option>
+        <option>Nada</option>
+      </select>
+
+      <label>3. ¿Cómo calificarías la actuación?</label>
+      <select>
+        <option>Excelente</option>
+        <option>Buena</option>
+        <option>Regular</option>
+        <option>Mala</option>
+      </select>
+
+      <label>4. ¿Recomendarías esta película?</label>
+      <select>
+        <option>Sí</option>
+        <option>No</option>
+      </select>
+
+      <label>5. ¿Te gustaron los productos adquiridos?</label>
+      <select>
+        <option>Sí</option>
+        <option>No</option>
+        <option>No compré</option>
+      </select>
+
+      <label>6. ¿Volverías a ver otra película aquí?</label>
+      <select>
+        <option>Claro que sí</option>
+        <option>Tal vez</option>
+        <option>No</option>
+      </select>
+
+      <label>7. Comentario adicional:</label>
+      <textarea rows="4" placeholder="Escribe tus comentarios..."></textarea>
+
+      <button class="btn" type="submit">🎟️ Enviar Encuesta</button>
+      <a href="index.html" class="btn btn-volver">Volver al Inicio</a>
+
+    </form>
+  </div>
+
+</body>
+</html>
